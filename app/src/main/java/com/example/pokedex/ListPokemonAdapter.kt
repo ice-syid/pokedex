@@ -1,6 +1,5 @@
 package com.example.pokedex
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +12,7 @@ import com.bumptech.glide.request.RequestOptions
 class ListPokemonAdapter(private val listPokemon: ArrayList<Pokemon>) :
     RecyclerView.Adapter<ListPokemonAdapter.ListViewHolder>() {
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var layout: View = itemView.findViewById(R.id.layout_cardView)
+        var layout: View = itemView.findViewById(R.id.layout_item)
         var tvId: TextView = itemView.findViewById(R.id.tv_item_id)
         var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
         var tvType: TextView = itemView.findViewById(R.id.tv_item_type)
@@ -45,14 +44,14 @@ class ListPokemonAdapter(private val listPokemon: ArrayList<Pokemon>) :
         }
 
         val colorBackground = when (pokemon.type) {
-            "Grass" -> "#388e3c"
-            "Fire" -> "#d32f2f"
-            "Water" -> "#1976d2"
-            else -> "#fbc02d"
+            "Grass" -> R.drawable.background_grass
+            "Fire" -> R.drawable.background_fire
+            "Water" -> R.drawable.background_water
+            else -> R.drawable.background_electric
         }
 
         holder.imgPhoto.setBackgroundResource(imgBackground)
-        holder.layout.setBackgroundColor(Color.parseColor(colorBackground))
+        holder.layout.setBackgroundResource(colorBackground)
 
         holder.tvId.text = pokemon.id
         holder.tvName.text = pokemon.name
