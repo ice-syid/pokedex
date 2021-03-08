@@ -1,5 +1,7 @@
 package com.example.pokedex
 
+import com.example.pokedex.model.Pokemon
+
 object PokemonData {
     private val pokemonId =
         arrayOf(

@@ -51,13 +51,5 @@
                 android:textColor="@android:color/white"
                 tools:text="@string/type" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/tv_item_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:textColor="@android:color/white"
-            tools:text="@string/description" />
     </RelativeLayout>
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.pokedex
+package com.example.pokedex.ui
 
 import android.os.Bundle
 import android.view.Menu
@@ -6,6 +6,10 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pokedex.Pokemon
+import com.example.pokedex.PokemonData
+import com.example.pokedex.R
+import com.example.pokedex.adapter.ListPokemonAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var rvPokemon: RecyclerView
