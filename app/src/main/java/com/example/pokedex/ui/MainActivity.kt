@@ -4,12 +4,14 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pokedex.R
+import com.example.pokedex.adapter.GridPokemonAdapter
+import com.example.pokedex.adapter.ListPokemonAdapter
 import com.example.pokedex.model.Pokemon
 import com.example.pokedex.util.PokemonData
-import com.example.pokedex.R
-import com.example.pokedex.adapter.ListPokemonAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var rvPokemon: RecyclerView
@@ -32,6 +34,12 @@ class MainActivity : AppCompatActivity() {
         rvPokemon.adapter = listPokemonAdapter
     }
 
+    private fun showRecyclerGrid() {
+        rvPokemon.layoutManager = GridLayoutManager(this, 2)
+        val gridHeroAdapter = GridPokemonAdapter(list)
+        rvPokemon.adapter = gridHeroAdapter
+    }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return super.onCreateOptionsMenu(menu)
@@ -48,6 +56,7 @@ class MainActivity : AppCompatActivity() {
                 showRecyclerList()
             }
             R.id.action_grid -> {
+                showRecyclerGrid()
             }
         }
     }

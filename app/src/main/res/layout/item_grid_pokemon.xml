@@ -9,9 +9,9 @@
     android:layout_marginTop="8dp"
     android:layout_marginRight="8dp"
     android:paddingLeft="8dp"
-    android:paddingTop="3dp"
+    android:paddingTop="5dp"
     android:paddingRight="8dp"
-    android:paddingBottom="3dp"
+    android:paddingBottom="5dp"
     tools:background="@color/cardview_dark_background">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -25,43 +25,27 @@
 
     <TextView
         android:id="@+id/tv_item_id"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="12dp"
         android:textColor="@android:color/white"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/img_item_photo"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/img_item_photo"
         app:layout_constraintTop_toTopOf="@+id/img_item_photo"
-        app:layout_constraintVertical_bias="0.20"
         tools:text="@string/id" />
 
     <TextView
         android:id="@+id/tv_item_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:textColor="@android:color/white"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_item_id"
+        app:layout_constraintBottom_toBottomOf="@+id/img_item_photo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_item_id"
-        app:layout_constraintTop_toTopOf="@+id/tv_item_id"
+        app:layout_constraintStart_toStartOf="@+id/tv_item_id"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_id"
         tools:text="@string/pokemon" />
-
-    <TextView
-        android:id="@+id/tv_item_type"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/img_item_photo"
-        app:layout_constraintTop_toBottomOf="@+id/tv_item_name"
-        tools:text="@string/type" />
 </androidx.constraintlayout.widget.ConstraintLayout>
