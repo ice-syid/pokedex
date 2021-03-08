@@ -6,8 +6,8 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.pokedex.Pokemon
-import com.example.pokedex.PokemonData
+import com.example.pokedex.model.Pokemon
+import com.example.pokedex.util.PokemonData
 import com.example.pokedex.R
 import com.example.pokedex.adapter.ListPokemonAdapter
 

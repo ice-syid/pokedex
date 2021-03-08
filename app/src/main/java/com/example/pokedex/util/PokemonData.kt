@@ -1,5 +1,6 @@
-package com.example.pokedex
+package com.example.pokedex.util
 
+import com.example.pokedex.R
 import com.example.pokedex.model.Pokemon
 
 object PokemonData {

@@ -1,4 +1,4 @@
-package com.example.pokedex
+package com.example.pokedex.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.example.pokedex.model.Pokemon
+import com.example.pokedex.R
 
 class ListPokemonAdapter(private val listPokemon: ArrayList<Pokemon>) :
     RecyclerView.Adapter<ListPokemonAdapter.ListViewHolder>() {
@@ -22,13 +24,13 @@ class ListPokemonAdapter(private val listPokemon: ArrayList<Pokemon>) :
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): ListPokemonAdapter.ListViewHolder {
+    ): ListViewHolder {
         val view: View =
             LayoutInflater.from(parent.context).inflate(R.layout.item_row_pokemon, parent, false)
         return ListViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ListPokemonAdapter.ListViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val pokemon = listPokemon[position]
 
         Glide.with(holder.itemView.context)
