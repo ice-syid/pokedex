@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Pokedex</string>
     <string name="pokedex">Pokedex</string>
@@ -11,6 +12,14 @@
     <string name="favorite">Favorite</string>
     <string name="share">Share</string>
     <string name="switch_layout">Switch Layout</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="abdurrasyid_muhasibi">Abdurrasyid Muhasibi</string>
+    <string name="email">A1311651@bangkit.academy</string>
+    <string name="about">
+        Final year student at State Polytechnic of Malang majoring in Information Technology.\n
+        Critical and innovative thinkers with achievements (team) as finalists at KMIPN 2019.\n
+        Quite experienced in using SCRUM and code versioning tools like git in project management.\n
+        Coders in codeforces. Enjoys writing code using C++, Java, and Kotlin programming languages.\n
+        Hope to learn more, and get better every day :)</string>
 </resources>
