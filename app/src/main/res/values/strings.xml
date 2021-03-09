@@ -25,4 +25,6 @@
 
     <string name="home">Home</string>
     <string name="about">About</string>
+    <string name="open_in_browser">Open In Browser</string>
+
 </resources>
