@@ -8,10 +8,23 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.pokedex.ui.HomeFragment"
-        android:label="@string/app_name" />
+        android:label="@string/app_name" >
+        <action
+            android:id="@+id/action_nav_home_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_about"
         android:name="com.example.pokedex.ui.AboutFragment"
         android:label="@string/about"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.pokedex.ui.DetailFragment"
+        android:label="@string/detail_pokemon"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="selectedPokemon"
+            app:argType="com.example.pokedex.model.Pokemon" />
+    </fragment>
 </navigation>

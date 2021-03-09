@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".ui.DetailFragment">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -18,18 +19,21 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
             android:layout_gravity="clip_vertical|center_horizontal"
-            android:layout_marginTop="86dp"
+            android:layout_marginTop="32dp"
             android:importantForAccessibility="no"
-            tools:src="@drawable/_01"
-            tools:background="@drawable/grass" />
-    </LinearLayout>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/grass"
+            tools:src="@drawable/_01" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="420dp"
+        android:layout_height="0dp"
         android:background="@drawable/background_detail"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -81,29 +85,31 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="48dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="48dp"
+            android:layout_marginBottom="48dp"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_open_link"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_type_detail"
             tools:text='"There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger."' />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_open_link"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
             android:text="@string/open_in_browser"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button2"
+            app:layout_constraintEnd_toStartOf="@+id/btn_share"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_share"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
@@ -111,7 +117,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button" />
+            app:layout_constraintStart_toEndOf="@+id/btn_open_link" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

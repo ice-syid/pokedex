@@ -24,7 +24,8 @@
         Hope to learn more, and get better every day :)</string>
 
     <string name="home">Home</string>
-    <string name="about">About</string>
+    <string name="about">About Me</string>
     <string name="open_in_browser">Open In Browser</string>
+    <string name="detail_pokemon">Detail Pokemon</string>
 
 </resources>

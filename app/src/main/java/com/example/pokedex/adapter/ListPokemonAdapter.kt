@@ -5,11 +5,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.example.pokedex.model.Pokemon
 import com.example.pokedex.R
+import com.example.pokedex.model.Pokemon
+import com.example.pokedex.ui.HomeFragmentDirections
 
 class ListPokemonAdapter(private val listPokemon: ArrayList<Pokemon>) :
     RecyclerView.Adapter<ListPokemonAdapter.ListViewHolder>() {
@@ -58,6 +60,11 @@ class ListPokemonAdapter(private val listPokemon: ArrayList<Pokemon>) :
         holder.tvId.text = pokemon.id
         holder.tvName.text = pokemon.name
         holder.tvType.text = pokemon.type
+
+        holder.itemView.setOnClickListener {
+            val action = HomeFragmentDirections.actionNavHomeToDetailFragment(pokemon)
+            holder.itemView.findNavController().navigate(action)
+        }
     }
 
     override fun getItemCount(): Int {
