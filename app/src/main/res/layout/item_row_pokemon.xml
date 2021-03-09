@@ -12,7 +12,7 @@
     android:paddingTop="3dp"
     android:paddingRight="8dp"
     android:paddingBottom="3dp"
-    tools:background="@color/cardview_dark_background">
+    tools:background="@drawable/background_grass">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_item_photo"
@@ -21,7 +21,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@color/black" />
+        tools:src="@drawable/_01" />
 
     <TextView
         android:id="@+id/tv_item_id"
@@ -35,7 +35,7 @@
         app:layout_constraintStart_toEndOf="@+id/img_item_photo"
         app:layout_constraintTop_toTopOf="@+id/img_item_photo"
         app:layout_constraintVertical_bias="0.20"
-        tools:text="@string/id" />
+        tools:text="#001" />
 
     <TextView
         android:id="@+id/tv_item_name"
@@ -49,7 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_item_id"
         app:layout_constraintTop_toTopOf="@+id/tv_item_id"
-        tools:text="@string/pokemon" />
+        tools:text="Bulbasaur" />
 
     <TextView
         android:id="@+id/tv_item_type"
@@ -63,5 +63,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/img_item_photo"
         app:layout_constraintTop_toBottomOf="@+id/tv_item_name"
-        tools:text="@string/type" />
+        tools:text="Grass" />
 </androidx.constraintlayout.widget.ConstraintLayout>

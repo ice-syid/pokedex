@@ -15,7 +15,6 @@ class GridPokemonAdapter(private val gridPokemon: ArrayList<Pokemon>) :
     RecyclerView.Adapter<GridPokemonAdapter.GridViewHolder>() {
     class GridViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var layout: View = itemView.findViewById(R.id.layout_item)
-        var tvId: TextView = itemView.findViewById(R.id.tv_item_id)
         var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
         var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
     }
@@ -54,7 +53,6 @@ class GridPokemonAdapter(private val gridPokemon: ArrayList<Pokemon>) :
         holder.imgPhoto.setBackgroundResource(imgBackground)
         holder.layout.setBackgroundResource(colorBackground)
 
-        holder.tvId.text = pokemon.id
         holder.tvName.text = pokemon.name
     }
 

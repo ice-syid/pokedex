@@ -12,7 +12,7 @@
     android:paddingTop="6dp"
     android:paddingRight="8dp"
     android:paddingBottom="6dp"
-    tools:background="@color/cardview_dark_background">
+    tools:background="@drawable/background_grass">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_item_photo"
@@ -21,31 +21,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@color/black" />
-
-    <TextView
-        android:id="@+id/tv_item_id"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/img_item_photo"
-        app:layout_constraintTop_toTopOf="@+id/img_item_photo"
-        tools:text="@string/id" />
+        tools:src="@drawable/_01" />
 
     <TextView
         android:id="@+id/tv_item_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:textColor="@android:color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/img_item_photo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tv_item_id"
-        app:layout_constraintTop_toBottomOf="@+id/tv_item_id"
-        tools:text="@string/pokemon" />
+        app:layout_constraintStart_toEndOf="@+id/img_item_photo"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Bulbasaur" />
 </androidx.constraintlayout.widget.ConstraintLayout>
