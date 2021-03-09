@@ -49,7 +49,7 @@ class HomeFragment : Fragment() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu_main, menu)
+        inflater.inflate(R.menu.recyclerview_menu, menu)
         val layoutButton = menu.findItem(R.id.action_switch_layout)
         setIcon(layoutButton)
     }
