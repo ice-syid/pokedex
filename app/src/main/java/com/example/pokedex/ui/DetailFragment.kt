@@ -1,6 +1,8 @@
 package com.example.pokedex.ui
 
+import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -64,5 +66,25 @@ class DetailFragment : Fragment() {
         binding.tvNameDetail.text = selectedPokemon.name
         binding.tvTypeDetail.text = selectedPokemon.type
         binding.tvDescriptionDetail.text = selectedPokemon.description
+
+        val baseUrl = "https://www.pokemon.com/us/pokedex/"
+        val url = baseUrl + selectedPokemon.name
+
+        binding.btnOpenLink.setOnClickListener {
+            val action = Intent().apply {
+                this.action = Intent.ACTION_VIEW
+                this.setData(Uri.parse(url))
+            }
+            startActivity(action)
+        }
+
+        binding.btnShare.setOnClickListener {
+            val action = Intent().apply {
+                this.action = Intent.ACTION_SEND
+                this.putExtra(Intent.EXTRA_TEXT, "${selectedPokemon.name} is my favorite pokemon.")
+                this.type = "text/plain"
+            }
+            startActivity(action)
+        }
     }
 }
