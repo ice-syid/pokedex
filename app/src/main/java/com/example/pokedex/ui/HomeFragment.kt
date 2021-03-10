@@ -39,6 +39,7 @@ class HomeFragment : Fragment() {
         recyclerView = binding.rvPokemon
         recyclerView.setHasFixedSize(true)
 
+        list.clear()
         list.addAll(PokemonData.listData)
         chooseLayout()
     }
