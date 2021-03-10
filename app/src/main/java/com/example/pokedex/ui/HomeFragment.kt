@@ -72,11 +72,13 @@ class HomeFragment : Fragment() {
         if (isLinearLayoutManager) {
             binding.rvPokemon.layoutManager = LinearLayoutManager(this.requireContext())
             val listPokemonAdapter = ListPokemonAdapter(list)
+            listPokemonAdapter.notifyDataSetChanged()
             recyclerView.adapter = listPokemonAdapter
         } else {
             recyclerView.layoutManager = GridLayoutManager(this.requireContext(), 2)
-            val gridHeroAdapter = GridPokemonAdapter(list)
-            recyclerView.adapter = gridHeroAdapter
+            val gridPokemonAdapter = GridPokemonAdapter(list)
+            gridPokemonAdapter.notifyDataSetChanged()
+            recyclerView.adapter = gridPokemonAdapter
         }
     }
 

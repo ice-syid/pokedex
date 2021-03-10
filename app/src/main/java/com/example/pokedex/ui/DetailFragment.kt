@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
@@ -85,6 +86,31 @@ class DetailFragment : Fragment() {
                 this.type = "text/plain"
             }
             startActivity(action)
+        }
+
+        binding.isFavorite.setOnClickListener {
+            selectedPokemon.isFavorite = !selectedPokemon.isFavorite
+            favoriteState(selectedPokemon.isFavorite)
+        }
+    }
+
+    private fun favoriteState(state: Boolean) {
+        context?.let { it ->
+            if (selectedPokemon.isFavorite)
+                binding.isFavorite.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        it,
+                        R.drawable.ic_favorite_on
+                    )
+                )
+            else {
+                binding.isFavorite.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        it,
+                        R.drawable.ic_favorite_off
+                    )
+                )
+            }
         }
     }
 }

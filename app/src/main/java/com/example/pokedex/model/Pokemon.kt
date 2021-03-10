@@ -9,5 +9,6 @@ data class Pokemon(
     var name: String = "",
     var type: String = "",
     var description: String = "",
-    var photo: Int = 0
+    var photo: Int = 0,
+    var isFavorite: Boolean = false
 ) : Parcelable

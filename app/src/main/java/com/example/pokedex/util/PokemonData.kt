@@ -131,6 +131,7 @@ object PokemonData {
                 pokemon.type = pokemonType[position]
                 pokemon.description = pokemonDescription[position]
                 pokemon.photo = pokemonPhoto[position]
+                pokemon.isFavorite = false
                 list.add(pokemon)
             }
             return list;
